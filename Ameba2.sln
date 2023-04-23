@@ -5,6 +5,8 @@ VisualStudioVersion = 17.3.32825.248
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Keyl2", "Keyl2\Keyl2.csproj", "{FE8F9706-BCEE-4C08-907E-693917006F23}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gulag", "Gulag\Gulag.csproj", "{5B1508A6-1F40-4913-A985-2DC7004F28E0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{FE8F9706-BCEE-4C08-907E-693917006F23}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FE8F9706-BCEE-4C08-907E-693917006F23}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FE8F9706-BCEE-4C08-907E-693917006F23}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B1508A6-1F40-4913-A985-2DC7004F28E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B1508A6-1F40-4913-A985-2DC7004F28E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B1508A6-1F40-4913-A985-2DC7004F28E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B1508A6-1F40-4913-A985-2DC7004F28E0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
